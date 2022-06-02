@@ -36,7 +36,7 @@ import Search from '../search'
 import withRegistration from '../../hoc/with-registration'
 import {
     AccountIcon,
-    // BrandLogo,
+    BrandLogo,
     BasketIcon,
     HamburgerIcon,
     ChevronDownIcon,
@@ -73,7 +73,7 @@ const Header = ({
     children,
     onMenuClick = noop,
     onMyAccountClick = noop,
-    // onLogoClick = noop,
+    onLogoClick = noop,
     onMyCartClick = noop,
     onWishlistClick = noop,
     ...props
@@ -128,7 +128,7 @@ const Header = ({
                         {...styles.icons}
                         onClick={onMenuClick}
                     />
-                    {/* <IconButton
+                    <IconButton
                         aria-label={intl.formatMessage({
                             id: 'header.button.assistive_msg.logo',
                             defaultMessage: 'Logo'
@@ -137,7 +137,7 @@ const Header = ({
                         {...styles.icons}
                         variant="unstyled"
                         onClick={onLogoClick}
-                    /> */}
+                    />
                     <Box {...styles.bodyContainer}>{children}</Box>
                     <Box {...styles.searchContainer}>
                         <Search
